@@ -57,8 +57,7 @@ class Game:
 
 
 def main():
-    with open("input.txt", "r") as input_fp:
-        input_lines = input_fp.readlines()
+    input_lines = read_input_from_daynum(2)
     overall_score = 0
     with open("game_results.txt", "w+") as result_fp:
         for line in input_lines:

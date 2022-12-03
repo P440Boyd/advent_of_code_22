@@ -1,10 +1,8 @@
-def read_input():
-    with open("Day 3", "r") as input_fp:
-        return input_fp.readlines()
+from read_input import read_input_from_daynum
 
 
 def main():
-    puzzle_input = read_input()
+    puzzle_input = read_input_from_daynum(3)
     for line in puzzle_input:
         print(line)
 
