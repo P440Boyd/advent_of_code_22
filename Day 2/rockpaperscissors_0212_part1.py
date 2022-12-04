@@ -35,20 +35,11 @@ class Round:
         if self.my_choice == self.their_choice:
             return 3, 3
         elif self.my_choice == "rock":
-            if self.their_choice == "scissors":
-                return 0, 6
-            else:
-                return 6, 0
+            return (0, 6) if self.their_choice == "scissors" else (6, 0)
         elif self.my_choice == "paper":
-            if self.their_choice == "rock":
-                return 0, 6
-            else:
-                return 6, 0
+            return (0, 6) if self.their_choice == "rock" else (6, 0)
         elif self.my_choice == "scissors":
-            if self.their_choice == "paper":
-                return 0, 6
-            else:
-                return 6, 0
+            return (0, 6) if self.their_choice == "paper" else (6, 0)
 
 
 class Game:
@@ -62,7 +53,7 @@ def main():
     with open("game_results.txt", "w+") as result_fp:
         for line in input_lines:
             game_round = Round(line)
-            their_score, my_score = game_round.evaluate_scores()
+            _, my_score = game_round.evaluate_scores()
             overall_score += my_score
             result_fp.write(
                 f"Their choice: {game_round.their_choice}. My choice: {game_round.my_choice}. My score: {game_round.my_score}.\n"

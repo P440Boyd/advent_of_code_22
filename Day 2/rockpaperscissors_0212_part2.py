@@ -3,7 +3,7 @@ from typing import List
 
 
 class Round:
-    def __init__(self, line) -> None:
+    def __init__(self, line: str) -> None:
         self.translation_dict = {
             "A": "rock",
             "B": "paper",
@@ -32,25 +32,25 @@ class Round:
         )
 
     def _calculate_my_choice(self):
-        if self.their_choice == "rock":
-            if self.desired_outcome == "lose":
-                return "scissors"
-            elif self.desired_outcome == "draw":
-                return "rock"
-            elif self.desired_outcome == "win":
-                return "paper"
         if self.their_choice == "paper":
-            if self.desired_outcome == "lose":
-                return "rock"
-            elif self.desired_outcome == "draw":
+            if self.desired_outcome == "draw":
                 return "paper"
+            elif self.desired_outcome == "lose":
+                return "rock"
             elif self.desired_outcome == "win":
                 return "scissors"
-        if self.their_choice == "scissors":
-            if self.desired_outcome == "lose":
-                return "paper"
-            elif self.desired_outcome == "draw":
+        elif self.their_choice == "rock":
+            if self.desired_outcome == "draw":
+                return "rock"
+            elif self.desired_outcome == "lose":
                 return "scissors"
+            elif self.desired_outcome == "win":
+                return "paper"
+        elif self.their_choice == "scissors":
+            if self.desired_outcome == "draw":
+                return "scissors"
+            elif self.desired_outcome == "lose":
+                return "paper"
             elif self.desired_outcome == "win":
                 return "rock"
 
