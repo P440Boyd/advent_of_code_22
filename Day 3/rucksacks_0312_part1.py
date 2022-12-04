@@ -1,4 +1,3 @@
-from calendar import c
 from read_input import read_input_from_daynum
 import string
 
