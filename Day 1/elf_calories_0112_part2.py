@@ -17,7 +17,7 @@ def build_elves(input_data):
         try:
             int(line_content)
             new_elf.add_calories(int(line_content.strip()))
-        except:
+        except Exception:
             elves.append(new_elf)
             new_elf = Elf()
     return elves
