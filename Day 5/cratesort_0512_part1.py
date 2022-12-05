@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple
+from typing import List
 from read_input import read_input_from_daynum
 
 

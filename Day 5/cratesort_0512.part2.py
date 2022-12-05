@@ -90,7 +90,6 @@ class CrateMatrix:
 
 
 def main():
-
     puzzle_input = read_input_from_daynum(5)
     crate_matrix = get_crate_matrix(puzzle_input)
     puzzle_instructions = get_puzzle_instructions(puzzle_input)
