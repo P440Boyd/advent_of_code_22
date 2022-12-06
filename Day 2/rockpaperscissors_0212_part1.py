@@ -42,11 +42,6 @@ class Round:
             return (0, 6) if self.their_choice == "paper" else (6, 0)
 
 
-class Game:
-    def __init__(self) -> None:
-        self.rounds: List[Round] = []
-
-
 def main():
     input_lines = read_input_from_daynum(2)
     overall_score = 0
