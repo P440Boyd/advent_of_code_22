@@ -55,11 +55,6 @@ class Round:
                 return "rock"
 
 
-class Game:
-    def __init__(self) -> None:
-        self.rounds: List[Round] = []
-
-
 def main():
     input_lines = read_input_from_daynum(2)
     overall_score = 0
