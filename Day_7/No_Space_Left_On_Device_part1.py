@@ -44,7 +44,6 @@ def main():
     queue.reverse()
     for directory in queue:
         directory.generate_dir_total_size()
-        # queue.pop(queue.index(directory))
 
     total_size = 0
     for directory in queue:
@@ -53,9 +52,7 @@ def main():
                 f"Directory name is {directory.name}. It has children {directory.children} and parent {directory.parent}. Size of files in its directory is {directory.total_size}."
             )
             total_size += directory.total_size
-
     size_free = 70_000_000 - cwd.total_size
-
     for d in queue:
         if size_free + d.total_size >= 30000000:
             print(d.name, d.total_size)
