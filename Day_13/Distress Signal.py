@@ -1,4 +1,3 @@
-from turtle import left
 from read_input import read_input_from_daynum
 import ast
 
@@ -62,7 +61,6 @@ def part_2(puzzle_input):
                 no_space_packets[i] = no_space_packets[i + 1]
                 no_space_packets[i + 1] = holding_item
                 ordered = False
-
     print(
         f"Indexes two and six multiplied: {(no_space_packets.index([[2]]) + 1) * (no_space_packets.index([[6]]) + 1)}."
     )
